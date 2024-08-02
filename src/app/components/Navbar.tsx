@@ -2,19 +2,19 @@ import './navbar.css';
 
 const links = [
   {
-    name: 'Link 1',
+    name: 'Home',
     href: '#',
   },
   {
-    name: 'Link 2',
+    name: 'Bars',
     href: '#',
   },
   {
-    name: 'Link 3',
+    name: 'Events',
     href: '#',
   },
   {
-    name: 'Link 4',
+    name: 'About',
     href: '#',
   },
   {
@@ -32,11 +32,15 @@ const Navbar = () => {
           </div>
           <div data-thq="thq-navbar-nav" className="navbar-desktop-menu">
             <nav className="navbar-links">
-              <span className="thq-body-small thq-link">link 1</span>
-              <span className="thq-body-small thq-link">link 2</span>
-              <span className="thq-body-small thq-link">link 3</span>
-              <span className="thq-body-small thq-link">link 4</span>
-              <span className="thq-body-small thq-link">link 5</span>
+              {links.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.href}
+                  className="thq-body-small thq-link"
+                >
+                  {link.name}
+                </a>
+              ))}
             </nav>
             <div className="navbar-buttons">
               <button className="navbar-action1 thq-button-filled thq-button-animated">
@@ -67,11 +71,15 @@ const Navbar = () => {
                 </div>
               </div>
               <nav className="navbar-links1">
-                <span className="thq-body-small thq-link">link 1</span>
-                <span className="thq-body-small thq-link">link 2</span>
-                <span className="thq-body-small thq-link">link 3</span>
-                <span className="thq-body-small thq-link">link 4</span>
-                <span className="thq-body-small thq-link">link 5</span>
+                {links.map((link, index) => (
+                  <a
+                    key={index}
+                    href={link.href}
+                    className="thq-body-small thq-link"
+                  >
+                    {link.name}
+                  </a>
+                ))}
               </nav>
             </div>
             <div className="navbar-buttons1">
