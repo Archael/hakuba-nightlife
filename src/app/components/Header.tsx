@@ -4,7 +4,7 @@ type HeaderProps = {
 };
 const Header = ({ children }: HeaderProps) => {
   return (
-    <header className="flex items-center justify-between space-x-4 p-6">
+    <header>
       <div className="flex items-center space-x-4">{children}</div>
     </header>
   );
